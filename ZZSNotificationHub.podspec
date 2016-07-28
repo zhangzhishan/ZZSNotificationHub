@@ -25,9 +25,11 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+Help to make any view a notification hub, only one line is needed.
+-iOS, -Notification.
                    DESC
 
-  s.homepage     = "http://EXAMPLE/ZZSNotificationHub"
+  s.homepage     = "https://github.com/zhangzhishan/ZZSNotificationHub.git"
   s.screenshots  = "http://7xpjf3.com1.z0.glb.clouddn.com/bump.gif", "http://7xpjf3.com1.z0.glb.clouddn.com/pop.gif", "http://7xpjf3.com1.z0.glb.clouddn.com/blink.gif"
 
 
@@ -64,7 +66,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
