@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5C260B15BDEAA0BDD935383 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5C26C47F968814FA37026B7 /* Assets.xcassets */; };
+		F5C2625F4621610DD1FF897B /* ZZSNotificationHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C26B58E69C037CFA7C2FD7 /* ZZSNotificationHubTests.swift */; };
+		F5C262E4B621F1BCAFAFBB9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C26A4A3C74F368619F4DBD /* ViewController.swift */; };
+		F5C262FC38F2BECFCD1BCFA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C26FE94DC0A17604A3D7AD /* Main.storyboard */; };
+		F5C26AEFD4CE0D7BFBCE59B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C26809D133EEBDF6782509 /* AppDelegate.swift */; };
+		F5C26B2390DF4B4FF75816F6 /* ZZSNotificationHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C263582DA1D47F3C393286 /* ZZSNotificationHubUITests.swift */; };
+		F5C26B7896E754559FB480E5 /* ZZSNotificationHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C265CD6471FFEFE76D619C /* ZZSNotificationHub.swift */; };
+		F5C26D77064A914AF470E965 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C2608681FC2D6D60ECAE54 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5C2694FD9B60316C604FEB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5C2664CE076CC2B7899F32C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5C262EA946D7656E990B4BD;
+			remoteInfo = ZZSNotificationHub;
+		};
+		F5C26AE93176B80325E95B7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5C2664CE076CC2B7899F32C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5C262EA946D7656E990B4BD;
+			remoteInfo = ZZSNotificationHub;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F5C261499014867BCFC0C880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		F5C263582DA1D47F3C393286 /* ZZSNotificationHubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZSNotificationHubUITests.swift; sourceTree = "<group>"; };
+		F5C265CD6471FFEFE76D619C /* ZZSNotificationHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZZSNotificationHub.swift; sourceTree = "<group>"; };
+		F5C2679B39979FA598CB10C3 /* ZZSNotificationHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZZSNotificationHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5C26809D133EEBDF6782509 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5C26928F8A4E38583468841 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5C269C84CAB72953A115681 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5C26A4A3C74F368619F4DBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F5C26ADDDCA3B34F29DE5C0B /* ZZSNotificationHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZZSNotificationHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5C26B58E69C037CFA7C2FD7 /* ZZSNotificationHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZSNotificationHubTests.swift; sourceTree = "<group>"; };
+		F5C26B7332E2BAA64CFC1692 /* ZZSNotificationHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZSNotificationHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5C26C03389AD01A28669452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		F5C26C47F968814FA37026B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5C26D3999B48639952988EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5C2666636CFD144F687DF9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C26B643982F0922A738FD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C26D70BB5104D382E26EEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5C26439EA0C23FAC7EA7F47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5C26B7332E2BAA64CFC1692 /* ZZSNotificationHub.app */,
+				F5C26ADDDCA3B34F29DE5C0B /* ZZSNotificationHubTests.xctest */,
+				F5C2679B39979FA598CB10C3 /* ZZSNotificationHubUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5C26AE3A87EFBACD44D186F /* ZZSNotificationHubUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F5C26C03389AD01A28669452 /* Info.plist */,
+				F5C263582DA1D47F3C393286 /* ZZSNotificationHubUITests.swift */,
+			);
+			path = ZZSNotificationHubUITests;
+			sourceTree = "<group>";
+		};
+		F5C26B4ABD51338425E59F42 = {
+			isa = PBXGroup;
+			children = (
+				F5C26439EA0C23FAC7EA7F47 /* Products */,
+				F5C26C57C217660A6D90B738 /* ZZSNotificationHub */,
+				F5C26FBE550632F1F2FF60B5 /* ZZSNotificationHubTests */,
+				F5C26AE3A87EFBACD44D186F /* ZZSNotificationHubUITests */,
+			);
+			sourceTree = "<group>";
+		};
+		F5C26C57C217660A6D90B738 /* ZZSNotificationHub */ = {
+			isa = PBXGroup;
+			children = (
+				F5C261499014867BCFC0C880 /* Info.plist */,
+				F5C26C47F968814FA37026B7 /* Assets.xcassets */,
+				F5C2608681FC2D6D60ECAE54 /* LaunchScreen.storyboard */,
+				F5C26809D133EEBDF6782509 /* AppDelegate.swift */,
+				F5C26FE94DC0A17604A3D7AD /* Main.storyboard */,
+				F5C26A4A3C74F368619F4DBD /* ViewController.swift */,
+				F5C265CD6471FFEFE76D619C /* ZZSNotificationHub.swift */,
+			);
+			path = ZZSNotificationHub;
+			sourceTree = "<group>";
+		};
+		F5C26FBE550632F1F2FF60B5 /* ZZSNotificationHubTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5C26D3999B48639952988EF /* Info.plist */,
+				F5C26B58E69C037CFA7C2FD7 /* ZZSNotificationHubTests.swift */,
+			);
+			path = ZZSNotificationHubTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5C260F21E600F3925A20EBF /* ZZSNotificationHubTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5C269252A66CE41A481214B /* Build configuration list for PBXNativeTarget "ZZSNotificationHubTests" */;
+			buildPhases = (
+				F5C26D09C93C21ADA00C4ACC /* Sources */,
+				F5C2666636CFD144F687DF9C /* Frameworks */,
+				F5C26DE115E34C9A453A80E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5C26B94CCB10AE5B0029156 /* PBXTargetDependency */,
+			);
+			name = ZZSNotificationHubTests;
+			productName = ZZSNotificationHubTests;
+			productReference = F5C26ADDDCA3B34F29DE5C0B /* ZZSNotificationHubTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F5C262EA946D7656E990B4BD /* ZZSNotificationHub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5C26C3CAB6BD8E243834887 /* Build configuration list for PBXNativeTarget "ZZSNotificationHub" */;
+			buildPhases = (
+				F5C26DE5D7542677474BDF51 /* Sources */,
+				F5C26D70BB5104D382E26EEC /* Frameworks */,
+				F5C2632F64CD1874E7F3A0C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZZSNotificationHub;
+			productName = ZZSNotificationHub;
+			productReference = F5C26B7332E2BAA64CFC1692 /* ZZSNotificationHub.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5C26458F1E731E3DC478A9C /* ZZSNotificationHubUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5C269741046A72FAADBDC29 /* Build configuration list for PBXNativeTarget "ZZSNotificationHubUITests" */;
+			buildPhases = (
+				F5C265A99957425A13346094 /* Sources */,
+				F5C26B643982F0922A738FD7 /* Frameworks */,
+				F5C26A3DBAF29BC398F6C6D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5C26C77995252210605290B /* PBXTargetDependency */,
+			);
+			name = ZZSNotificationHubUITests;
+			productName = ZZSNotificationHubUITests;
+			productReference = F5C2679B39979FA598CB10C3 /* ZZSNotificationHubUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5C2664CE076CC2B7899F32C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0730;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = code4fun;
+				TargetAttributes = {
+					F5C262EA946D7656E990B4BD = {
+						DevelopmentTeam = 3FYG9MS6AK;
+					};
+				};
+			};
+			buildConfigurationList = F5C264C26DDEA0CDF21148A1 /* Build configuration list for PBXProject "ZZSNotificationHub" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F5C26B4ABD51338425E59F42;
+			productRefGroup = F5C26439EA0C23FAC7EA7F47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5C262EA946D7656E990B4BD /* ZZSNotificationHub */,
+				F5C260F21E600F3925A20EBF /* ZZSNotificationHubTests */,
+				F5C26458F1E731E3DC478A9C /* ZZSNotificationHubUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5C2632F64CD1874E7F3A0C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5C260B15BDEAA0BDD935383 /* Assets.xcassets in Resources */,
+				F5C26D77064A914AF470E965 /* LaunchScreen.storyboard in Resources */,
+				F5C262FC38F2BECFCD1BCFA8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C26A3DBAF29BC398F6C6D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C26DE115E34C9A453A80E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5C265A99957425A13346094 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5C26B2390DF4B4FF75816F6 /* ZZSNotificationHubUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C26D09C93C21ADA00C4ACC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5C2625F4621610DD1FF897B /* ZZSNotificationHubTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C26DE5D7542677474BDF51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5C26AEFD4CE0D7BFBCE59B1 /* AppDelegate.swift in Sources */,
+				F5C262E4B621F1BCAFAFBB9A /* ViewController.swift in Sources */,
+				F5C26B7896E754559FB480E5 /* ZZSNotificationHub.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5C26B94CCB10AE5B0029156 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5C262EA946D7656E990B4BD /* ZZSNotificationHub */;
+			targetProxy = F5C2694FD9B60316C604FEB6 /* PBXContainerItemProxy */;
+		};
+		F5C26C77995252210605290B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5C262EA946D7656E990B4BD /* ZZSNotificationHub */;
+			targetProxy = F5C26AE93176B80325E95B7A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F5C2608681FC2D6D60ECAE54 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5C26928F8A4E38583468841 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F5C26FE94DC0A17604A3D7AD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5C269C84CAB72953A115681 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5C2627A2745C01177F9DC7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ZZSNotificationHub/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.code4fun.ZZSNotificationHub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		F5C26289E564A3735858203F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZZSNotificationHub.app/ZZSNotificationHub";
+				INFOPLIST_FILE = ZZSNotificationHubUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.code4fun.ZZSNotificationHubUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		F5C2637B1E6071CA8F73C2FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZZSNotificationHub.app/ZZSNotificationHub";
+				INFOPLIST_FILE = ZZSNotificationHubTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.code4fun.ZZSNotificationHubTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		F5C264201A2C0F9696E99DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZZSNotificationHub.app/ZZSNotificationHub";
+				INFOPLIST_FILE = ZZSNotificationHubTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.code4fun.ZZSNotificationHubTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+		F5C2647BB2BCCCFBCB560C17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5C265CF185D0C2A2B180E85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZZSNotificationHub.app/ZZSNotificationHub";
+				INFOPLIST_FILE = ZZSNotificationHubUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.code4fun.ZZSNotificationHubUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+		F5C26C3C268F5A783DB8F3BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5C26CFAC26C5A69EF305725 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ZZSNotificationHub/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.code4fun.ZZSNotificationHub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5C264C26DDEA0CDF21148A1 /* Build configuration list for PBXProject "ZZSNotificationHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5C26C3C268F5A783DB8F3BE /* Debug */,
+				F5C2647BB2BCCCFBCB560C17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5C269252A66CE41A481214B /* Build configuration list for PBXNativeTarget "ZZSNotificationHubTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5C2637B1E6071CA8F73C2FB /* Debug */,
+				F5C264201A2C0F9696E99DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5C269741046A72FAADBDC29 /* Build configuration list for PBXNativeTarget "ZZSNotificationHubUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5C26289E564A3735858203F /* Debug */,
+				F5C265CF185D0C2A2B180E85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5C26C3CAB6BD8E243834887 /* Build configuration list for PBXNativeTarget "ZZSNotificationHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5C2627A2745C01177F9DC7B /* Debug */,
+				F5C26CFAC26C5A69EF305725 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5C2664CE076CC2B7899F32C /* Project object */;
+}
