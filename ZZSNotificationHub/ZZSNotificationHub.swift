@@ -40,7 +40,7 @@ class ZZSView : UIView {
                 self.backgroundColor = backgroundColor
             }
             else {
-                self.backgroundColor = UIColor.clearColor()
+                self.backgroundColor = UIColor.clear
             }
         }
     }
@@ -73,39 +73,39 @@ class ZZSNotificationHub {
     }
     
     init(barButtonItem: UIBarButtonItem) {
-        self.setView(barButtonItem.valueForKey("view") as! UIView, andCount: 0)
+        self.setView(barButtonItem.value(forKey: "view") as! UIView, andCount: 0)
         self.scaleCircleSizeBy(0.7)
         self.moveCircleByX(-5.0, Y: 0)
     }
 
     // give this a view and an initial count (0 hides the notification circle)
     // and it will make a hub for you
-    func setView(view: UIView, andCount startCount: Int) {
+    func setView(_ view: UIView, andCount startCount: Int) {
         curOrderMagnitude = 0
         let frame: CGRect = view.frame
         isIndeterminateMode = false
         redCircle = ZZSView()
-        redCircle.userInteractionEnabled = false
+        redCircle.isUserInteractionEnabled = false
         redCircle.isUserChangingBackgroundColor = true
-        redCircle.backgroundColor = UIColor.redColor()
+        redCircle.backgroundColor = UIColor.red
         countLabel = UILabel(frame: redCircle.frame)
-        countLabel.userInteractionEnabled = false
+        countLabel.isUserInteractionEnabled = false
         self.count = startCount
-        countLabel.textAlignment = NSTextAlignment.Center
-        countLabel.textColor = UIColor.whiteColor()
-        countLabel.backgroundColor = UIColor.clearColor()
-        self.setCircleAtFrame(CGRectMake(frame.size.width - (ZZSNotificationHubDefaultDiameter * 2 / 3), -ZZSNotificationHubDefaultDiameter / 3, ZZSNotificationHubDefaultDiameter, ZZSNotificationHubDefaultDiameter))
+        countLabel.textAlignment = NSTextAlignment.center
+        countLabel.textColor = UIColor.white
+        countLabel.backgroundColor = UIColor.clear
+        self.setCircleAtFrame(CGRect(x: frame.size.width - (ZZSNotificationHubDefaultDiameter * 2 / 3), y: -ZZSNotificationHubDefaultDiameter / 3, width: ZZSNotificationHubDefaultDiameter, height: ZZSNotificationHubDefaultDiameter))
         view.addSubview(redCircle)
         view.addSubview(countLabel)
-        view.bringSubviewToFront(redCircle)
-        view.bringSubviewToFront(countLabel)
+        view.bringSubview(toFront: redCircle)
+        view.bringSubview(toFront: countLabel)
         self.checkZero()
     }
 
     // set the frame of the notification circle relative to the button
-    func setCircleAtFrame(frame: CGRect) {
+    func setCircleAtFrame(_ frame: CGRect) {
         redCircle.frame = frame
-        initialCenter = CGPointMake(frame.origin.x + frame.size.width / 2, frame.origin.y + frame.size.height / 2)
+        initialCenter = CGPoint(x: frame.origin.x + frame.size.width / 2, y: frame.origin.y + frame.size.height / 2)
         baseFrame = frame
         initialFrame = frame
         countLabel.frame = redCircle.frame
@@ -115,7 +115,7 @@ class ZZSNotificationHub {
     }
 
     // moves the circle by x amount on the x axis and y amount on the y axis
-    func moveCircleByX(x: CGFloat, Y y: CGFloat) {
+    func moveCircleByX(_ x: CGFloat, Y y: CGFloat) {
         var frame: CGRect = redCircle.frame
         frame.origin.x += x
         frame.origin.y += y
@@ -123,25 +123,25 @@ class ZZSNotificationHub {
     }
 
     // changes the size of the circle. setting a scale of 1 has no effect
-    func scaleCircleSizeBy(scale: CGFloat) {
+    func scaleCircleSizeBy(_ scale: CGFloat) {
         let fr = initialFrame
-        let width = fr.size.width * scale
-        let height = fr.size.height * scale
-        let wdiff = (fr.size.width - width) / 2
-        let hdiff = (fr.size.height - height) / 2
-        let frame = CGRectMake(fr.origin.x + wdiff, fr.origin.y + hdiff, width, height)
+        let width = (fr?.size.width)! * scale
+        let height = (fr?.size.height)! * scale
+        let wdiff = ((fr?.size.width)! - width) / 2
+        let hdiff = ((fr?.size.height)! - height) / 2
+        let frame = CGRect(x: (fr?.origin.x)! + wdiff, y: (fr?.origin.y)! + hdiff, width: width, height: height)
         self.setCircleAtFrame(frame)
     }
 
     // change the color of the notification circle
-    func setCircleColor(circleColor: UIColor, labelColor: UIColor) {
+    func setCircleColor(_ circleColor: UIColor, labelColor: UIColor) {
         redCircle.isUserChangingBackgroundColor = true
         redCircle.backgroundColor = circleColor
         countLabel.textColor = labelColor
     }
 
     func hideCount() {
-        countLabel.hidden = true
+        countLabel.isHidden = true
         isIndeterminateMode = true
     }
 
@@ -157,7 +157,7 @@ class ZZSNotificationHub {
     }
 
     // increases count by amount
-    func incrementBy(amount: Int) {
+    func incrementBy(_ amount: Int) {
         self.count += amount
     }
 
@@ -167,7 +167,7 @@ class ZZSNotificationHub {
     }
 
     // decreases count by amount
-    func decrementBy(amount: Int) {
+    func decrementBy(_ amount: Int) {
         if amount >= self.count {
             self.count = 0
             return
@@ -177,7 +177,7 @@ class ZZSNotificationHub {
 
 
     //%% set the font of the label
-    func setCountLabelFont(font: UIFont) {
+    func setCountLabelFont(_ font: UIFont) {
         countLabel.font = font
     }
 
@@ -208,36 +208,36 @@ class ZZSNotificationHub {
         startSize.beginTime = 0
         startSize.fromValue = pop_end_h/2
         startSize.toValue = pop_start_h/2
-        startSize.removedOnCompletion = false
+        startSize.isRemovedOnCompletion = false
         
         let outSize: CABasicAnimation = CABasicAnimation(keyPath: "cornerRadius")
         outSize.duration = time_out
         outSize.beginTime = time_start
         outSize.fromValue = startSize.toValue
         outSize.toValue = pop_out_h/2
-        outSize.removedOnCompletion = false
+        outSize.isRemovedOnCompletion = false
         
         let inSize: CABasicAnimation = CABasicAnimation(keyPath: "cornerRadius")
         inSize.duration = time_in
         inSize.beginTime = time_start+time_out
         inSize.fromValue = outSize.toValue
         inSize.toValue = pop_in_h/2
-        inSize.removedOnCompletion = false
+        inSize.isRemovedOnCompletion = false
         
         let endSize: CABasicAnimation = CABasicAnimation(keyPath: "cornerRadius")
         endSize.duration = time_end
         endSize.beginTime = time_in+time_out+time_start
         endSize.fromValue = inSize.toValue
         endSize.toValue = pop_end_h/2
-        endSize.removedOnCompletion = false
+        endSize.isRemovedOnCompletion = false
         
         let group: CAAnimationGroup = CAAnimationGroup()
         group.duration = time_start+time_out+time_in+time_end
         group.animations = [startSize,outSize,inSize,endSize]
         
-        redCircle.layer.addAnimation(group, forKey: nil)
+        redCircle.layer.add(group, forKey: nil)
         
-        UIView.animateWithDuration(time_start, animations: {
+        UIView.animate(withDuration: time_start, animations: {
             var frame: CGRect = self.redCircle.frame
             let center: CGPoint = self.redCircle.center
             frame.size.height = pop_start_h
@@ -246,7 +246,7 @@ class ZZSNotificationHub {
             self.redCircle.center = center
 
         }, completion: { (complete: Bool) in
-            UIView.animateWithDuration(time_out, animations: {
+            UIView.animate(withDuration: time_out, animations: {
                 var frame: CGRect = self.redCircle.frame
                 let center: CGPoint = self.redCircle.center
                 frame.size.height = pop_out_h
@@ -255,7 +255,7 @@ class ZZSNotificationHub {
                 self.redCircle.center = center
 
             }, completion: { (complete: Bool) in
-                UIView.animateWithDuration(time_in, animations: {
+                UIView.animate(withDuration: time_in, animations: {
                     var frame: CGRect = self.redCircle.frame
                     let center: CGPoint = self.redCircle.center
                     frame.size.height = pop_in_h
@@ -264,7 +264,7 @@ class ZZSNotificationHub {
                     self.redCircle.center = center
 
                 }, completion: { (complete: Bool) in
-                    UIView.animateWithDuration(time_end, animations: {
+                    UIView.animate(withDuration: time_end, animations: {
                         var frame: CGRect = self.redCircle.frame
                         let center: CGPoint = self.redCircle.center
                         frame.size.height = pop_end_h
@@ -284,14 +284,14 @@ class ZZSNotificationHub {
     // animation that flashes on an off
     func blink() {
         self.alpha = kBlinkAlpha
-        UIView.animateWithDuration(kBlinkDuration, animations: {
+        UIView.animate(withDuration: kBlinkDuration, animations: {
             self.alpha = 1
         }, completion: { (complete: Bool) in
-            UIView.animateWithDuration(kBlinkDuration, animations: {
+            UIView.animate(withDuration: kBlinkDuration, animations: {
                 self.alpha = kBlinkAlpha
 
             }, completion: { (complete: Bool) in
-                UIView.animateWithDuration(kBlinkDuration, animations: {
+                UIView.animate(withDuration: kBlinkDuration, animations: {
                     self.alpha = 1
 
                 })
@@ -303,21 +303,21 @@ class ZZSNotificationHub {
 
     // animation that jumps similar to OSX dock icons
     func bump() {
-        if !CGPointEqualToPoint(initialCenter!, redCircle.center) {
+        if !initialCenter!.equalTo(redCircle.center) {
             // canel previous animation
         }
         self.bumpCenterY(0)
-        UIView.animateWithDuration(kBumpTimeSeconds, animations: {
+        UIView.animate(withDuration: kBumpTimeSeconds, animations: {
             self.bumpCenterY(kFirstBumpDistance)
 
         }, completion: { (complete: Bool) in
-            UIView.animateWithDuration(kBumpTimeSeconds, animations: {	self.bumpCenterY(0)
+            UIView.animate(withDuration: kBumpTimeSeconds, animations: {	self.bumpCenterY(0)
 
             }, completion: { (complete: Bool) in
-                UIView.animateWithDuration(kBumpTimeSeconds2, animations: {	self.bumpCenterY(SECOND_BUMP_DIST)
+                UIView.animate(withDuration: kBumpTimeSeconds2, animations: {	self.bumpCenterY(SECOND_BUMP_DIST)
 
                 }, completion: { (complete: Bool) in
-                    UIView.animateWithDuration(kBumpTimeSeconds2, animations: {	self.bumpCenterY(0)
+                    UIView.animate(withDuration: kBumpTimeSeconds2, animations: {	self.bumpCenterY(0)
 
                     })
 
@@ -330,14 +330,14 @@ class ZZSNotificationHub {
 
     // MARK: - HELPERS
     // changes the Y origin of the notification circle
-    func bumpCenterY(yVal: Double) {
+    func bumpCenterY(_ yVal: Double) {
         var center: CGPoint = redCircle.center
         center.y = initialCenter!.y - CGFloat(yVal)
         redCircle.center = center
         countLabel.center = center
     }
 
-    func setAlpha(alpha: Double) {
+    func setAlpha(_ alpha: Double) {
         redCircle.alpha = CGFloat(alpha)
         countLabel.alpha = CGFloat(alpha)
     }
@@ -345,13 +345,13 @@ class ZZSNotificationHub {
     // hides the notification if the value is 0
     func checkZero() {
         if self.count <= 0 {
-            redCircle.hidden = true
-            countLabel.hidden = true
+            redCircle.isHidden = true
+            countLabel.isHidden = true
         }
         else {
-            redCircle.hidden = false
+            redCircle.isHidden = false
             if !isIndeterminateMode {
-                countLabel.hidden = false
+                countLabel.isHidden = false
             }
 
         }
@@ -367,7 +367,7 @@ class ZZSNotificationHub {
         frame.size.width = initialFrame.size.width * CGFloat((1 + kCountMagnitudeAdaptationRatio * Double(orderOfMagnitude - 1)))
         frame.origin.x = initialFrame.origin.x-(frame.size.width-initialFrame.size.width)/2
         redCircle.frame = frame
-        initialCenter = CGPointMake(frame.origin.x+frame.size.width/2, frame.origin.y+frame.size.height/2)
+        initialCenter = CGPoint(x: frame.origin.x+frame.size.width/2, y: frame.origin.y+frame.size.height/2)
         baseFrame = frame
         countLabel.frame = redCircle.frame
         curOrderMagnitude = orderOfMagnitude

@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.setupButton()
         let imageView: UIImageView = UIImageView(image: UIImage(named: "mail"))
-        imageView.frame = CGRectMake(self.view.frame.size.width / 2 - 35, 120, 70, 70)
+        imageView.frame = CGRect(x: self.view.frame.size.width / 2 - 35, y: 120, width: 70, height: 70)
         hub = ZZSNotificationHub(view: imageView)
         hub.moveCircleByX(-5, Y: 5)
         // moves the circle five pixels left and 5 down
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         self.view.addSubview(imageView)
     }
 
-    @IBAction func barButtonPressed(sender: AnyObject) {
+    @IBAction func barButtonPressed(_ sender: AnyObject) {
         barHub.increment()
 //        barHub.pop()
 //        barHub.blink()
@@ -46,13 +46,13 @@ class ViewController: UIViewController {
 
     func setupButton() {
         let color: UIColor = UIColor(red: 0.15, green: 0.67, blue: 0.88, alpha: 1)
-        let button: UIButton = UIButton(frame: CGRectMake(50, 400, 200, 60))
+        let button: UIButton = UIButton(frame: CGRect(x: 50, y: 400, width: 200, height: 60))
         button.center = self.view.center
-        button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        button.setTitle("Increment", forState: UIControlState.Normal)
+        button.setTitleColor(UIColor.white, for: UIControlState())
+        button.setTitle("Increment", for: UIControlState())
         button.backgroundColor = color
         button.layer.cornerRadius = 5
-        button.addTarget(self, action: #selector(testIncrement), forControlEvents: UIControlEvents.TouchUpInside)
+        button.addTarget(self, action: #selector(testIncrement), for: UIControlEvents.touchUpInside)
         self.view.addSubview(button)
     }
 
